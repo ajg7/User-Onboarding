@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Form() {
+function Form(props) {
 
 
     return(
@@ -49,7 +49,7 @@ function Form() {
                     </label>
                     <label>
                         <strong>Terms of Service:</strong>
-                        <input type="checkbox" name="termsOfService" value="1"/>
+                        <input type="checkbox" name="termsOfService" value="yes" />
                         <br />
                     </label>
                     <button>
