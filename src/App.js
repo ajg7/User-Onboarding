@@ -42,6 +42,7 @@ function App() {
   }
 
   const postNewUsers = newUser => {
+    console.log("Hi",newUser)
     axios.post("https://reqres.in/api/users", newUser)
       .then(response => {
         console.log(response)
@@ -56,6 +57,7 @@ function App() {
   }
 
   const inputChange = (key, value) => {
+    console.log(key,value);
     yup
       .reach(formSchema, key)
       .validate(value)
@@ -97,7 +99,7 @@ function App() {
       values={formValues}
       inputChange={inputChange}
       submit={submit}
-      error={formErrors}
+      errors={formErrors}
       />
     </div>
   );

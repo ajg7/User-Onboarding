@@ -60,23 +60,23 @@ function Form(props) {
                                 value={values.password}
                                 onChange={onInputChange}
                                 name="password" 
-                                type="text"
+                                type="password"
                             />
                             <br />
                         </label>
                         <label>
                             <strong>Position </strong>
                             <select 
-                                id="positions" 
-                                name="positions"
+                                id="position" 
+                                name="position"
                                 onChange={onInputChange}
                                 value={values.position}
                             >
-                                <option value="defaultOption">--Select One--</option>
-                                <option value="teamLeader">Team Leader</option>
-                                <option value="frontendEngineer">Frontend Engineer</option>
-                                <option value="backendEngineer">Backend Engineer</option>
-                                <option value="uiuxDesigner">UI/UX Designer</option>
+                                <option value="Default Option">--Select One--</option>
+                                <option value="Team Leader">Team Leader</option>
+                                <option value="Frontend Engineer">Frontend Engineer</option>
+                                <option value="Backend Engineer">Backend Engineer</option>
+                                <option value="UI/UX Designer">UI/UX Designer</option>
                             </select>
                             <br />
                         </label>
@@ -121,7 +121,7 @@ function Form(props) {
                             <input 
                                 type="checkbox" 
                                 name="termsOfService" 
-                                checked={values.termsOfService} 
+                                onChange={onInputChange}
                             />
                             <br />
                         </label>

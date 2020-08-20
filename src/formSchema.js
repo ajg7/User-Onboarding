@@ -15,12 +15,12 @@ const formSchema = yup.object().shape({
     position: yup
         .string()
         .oneOf(['Team Leader', 'Frontend Engineer', 'Backend Engineer', 'UI/UX Designer'], 'You must select a position')
-        .required('You must select a role'),
+        .required('You must select a position'),
     title: yup
         .string()
         .required("Must select one"),
     termsOfService: yup
-        .boolean()
+        .string()
         .required("Must check")
 })
 
