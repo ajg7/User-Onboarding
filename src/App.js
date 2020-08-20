@@ -4,6 +4,7 @@ import Form from "./Form.js";
 import * as yup from "yup";
 import axios from "axios";
 import formSchema from "./formSchema.js"
+import Users from "./Users";
 
 
 const initialFormValues = {
@@ -42,7 +43,6 @@ function App() {
   }
 
   const postNewUsers = newUser => {
-    console.log("Hi",newUser)
     axios.post("https://reqres.in/api/users", newUser)
       .then(response => {
         console.log(response)
@@ -57,7 +57,6 @@ function App() {
   }
 
   const inputChange = (key, value) => {
-    console.log(key,value);
     yup
       .reach(formSchema, key)
       .validate(value)
@@ -100,6 +99,9 @@ function App() {
       inputChange={inputChange}
       submit={submit}
       errors={formErrors}
+      />
+      <Users 
+      users={users}
       />
     </div>
   );

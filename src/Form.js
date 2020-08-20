@@ -24,7 +24,7 @@ function Form(props) {
         <div>
             <h1>New User Onboarding Form</h1>
             <div>
-                <form>
+                <form onSubmit={onSubmit}>
                     <div className="errors">
                         <div>{errors.name}</div>
                         <div>{errors.email}</div>
