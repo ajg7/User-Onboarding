@@ -1,6 +1,4 @@
-import* as yup from "yup"
-
-
+import * as yup from "yup"
 
 const formSchema = yup.object().shape({
     name: yup
@@ -16,7 +14,7 @@ const formSchema = yup.object().shape({
         .required('Password is Required'),
     position: yup
         .string()
-        .oneOf(['Team Leader', 'Frontend Engineer', 'Backend Engineer', 'UI/UX Designer'], 'You must select a role')
+        .oneOf(['Team Leader', 'Frontend Engineer', 'Backend Engineer', 'UI/UX Designer'], 'You must select a position')
         .required('You must select a role'),
     title: yup
         .string()
